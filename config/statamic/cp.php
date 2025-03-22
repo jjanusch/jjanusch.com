@@ -53,7 +53,36 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+        [
+            'type' => 'collection_count',
+            'collection' => 'posts',
+            'width' => 33,
+        ],
+        [
+            'type' => 'collection_count',
+            'collection' => 'pages',
+            'width' => 33,
+        ],
+        [
+            'type' => 'updater',
+            'width' => 33,
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'posts',
+            'limit' => 10,
+            'width' => 50,
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'pages',
+            'limit' => 10,
+            'width' => 50,
+        ],
+        [
+            'type' => 'seo_pro',
+            'width' => 50,
+        ]
     ],
 
     /*

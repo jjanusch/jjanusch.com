@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e78c37312101617be2e6bf96617e293",
+    "content-hash": "8bf612508a862fa688edd1ae0a048f1b",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -278,6 +278,51 @@
                 }
             ],
             "time": "2024-09-19T14:15:21+00:00"
+        },
+        {
+            "name": "daun/statamic-widget-collection-count",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/daun/statamic-widget-collection-count.git",
+                "reference": "e4894541d02a171dc1d26356f083358faf1409f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/daun/statamic-widget-collection-count/zipball/e4894541d02a171dc1d26356f083358faf1409f6",
+                "reference": "e4894541d02a171dc1d26356f083358faf1409f6",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^3.3|^4.0|^5.0"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Daun\\CollectionCount\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Statamic Widget: Collection Count",
+                    "description": "Display the number of entries per collection or taxonomy in your control panel"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Daun\\CollectionCount\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Display the number of entries per collection or taxonomy in your Statamic control panel",
+            "support": {
+                "issues": "https://github.com/daun/statamic-widget-collection-count/issues",
+                "source": "https://github.com/daun/statamic-widget-collection-count/tree/v1.3.1"
+            },
+            "time": "2024-12-10T18:51:13+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -4729,6 +4774,52 @@
                 }
             ],
             "time": "2025-03-17T21:51:45+00:00"
+        },
+        {
+            "name": "statamic/seo-pro",
+            "version": "6.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/seo-pro.git",
+                "reference": "276ad9387b5877a30a8bf624656b617f564fbbe1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/seo-pro/zipball/276ad9387b5877a30a8bf624656b617f564fbbe1",
+                "reference": "276ad9387b5877a30a8bf624656b617f564fbbe1",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^5.45.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.17",
+                "orchestra/testbench": "^8.28 || ^9.6.1 || ^10.0",
+                "phpunit/phpunit": "^10.5.35 || ^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Statamic\\SeoPro\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "SEO Pro",
+                    "description": "An all-in-one site reporting, metadata mastering, OG managing, Twitter card making, sitemap generating addon."
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\SeoPro\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/statamic/seo-pro/issues",
+                "source": "https://github.com/statamic/seo-pro/tree/6.6.0"
+            },
+            "time": "2025-02-26T11:54:37+00:00"
         },
         {
             "name": "statamic/stringy",
