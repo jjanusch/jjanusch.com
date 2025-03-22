@@ -1,0 +1,10 @@
+<div class="border-dashed border-b-1 border-gray-300 pb-2 mb-5">
+    <h1 class="font-bold text-3xl">{{ title }}</h1>
+    {{ partial:partials/post_by_line }}
+</div>
+
+<div>
+    {{ content }}
+        {{ partial src="sets/{type}" }}
+    {{ /content }}
+</div>

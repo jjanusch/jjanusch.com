@@ -1,0 +1,121 @@
+title: Post
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+              sets:
+                default_group:
+                  display: 'Default Group'
+                  sets:
+                    code:
+                      display: Code
+                      icon: programming-script-code
+                      fields:
+                        -
+                          handle: code
+                          field:
+                            type: code
+                            display: Code
+                            indent_type: spaces
+                    image:
+                      display: Image
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            min_files: 1
+                            container: assets
+                            dynamic: slug
+                            type: assets
+                            display: Image
+                            validate:
+                              - required
+                              - image
+                        -
+                          handle: caption
+                          field:
+                            type: text
+                            display: Caption
+          -
+            handle: summary
+            field:
+              character_limit: 250
+              type: textarea
+              display: Summary
+              instructions: 'A short summary of the post. If this is not provided, a truncated version of the Content field will be used.'
+              sortable: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default:
+                - 5e13027b-8afa-4356-8ae3-a0f273dba060
+              localizable: true
+              max_items: 1
+              validate:
+                - required
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              time_enabled: true

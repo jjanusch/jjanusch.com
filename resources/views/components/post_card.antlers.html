@@ -1,0 +1,13 @@
+<div>
+    <h3 class="font-bold text-3xl">
+        <a href="{{ permalink }}">{{ title }}</a>
+    </h3>
+    {{ partial:partials/post_by_line }}
+    <p>
+        {{ if summary }}
+            {{ summary }}
+        {{ else }}
+            {{ content | bard_text | safe_truncate(250, '...') }}
+        {{ /if }}
+    </p>
+</div>

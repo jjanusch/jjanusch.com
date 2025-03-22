@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+
+        <link href="/fontawesome/css/solid.css" rel="stylesheet" />
+        <link href="/fontawesome/css/fontawesome.css" rel="stylesheet" />
+        <link href="/fontawesome/css/brands.css" rel="stylesheet" />
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+    </head>
+    <body class="bg-white text-black antialiased">
+        {{ partial:partials/header }}
+
+        <div class="flex justify-center">
+            <div class="w-full max-w-screen-xl md:grid grid-cols-4 gap-6">
+                <div class="md:col-span-3">
+                    {{ template_content }}
+                </div>
+                <div class="md:col-span-1">
+                    {{ partial:partials/sidebar }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

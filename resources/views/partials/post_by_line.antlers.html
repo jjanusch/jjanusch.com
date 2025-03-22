@@ -1,0 +1,11 @@
+<p class="text-gray-600 mb-2">
+    Posted by
+    {{ if author.avatar }}
+    <img
+        src="{{ author.avatar }}"
+        alt="Profile image for {{ author.name }}"
+        class="rounded w-4 h-4 mb-1 inline"
+    />
+    {{ /if }}
+    <span class="font-bold">{{ author.name }}</span> at <span class="">{{ date format="F jS, Y h:m A" }}</span>
+</p>

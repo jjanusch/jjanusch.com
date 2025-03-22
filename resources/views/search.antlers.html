@@ -1,0 +1,15 @@
+<div class="container py-8 md:py-12">
+    <h2>Results for: <span class="italic">{{ get:q }}</span></h2>
+
+    {{ search:results as="results" }}
+        {{ if results }}
+            <div class="container py-8 md:py-12">
+                {{ results }}
+                    {{ partial:components/post_card }}
+                {{ /results }}
+            </div>
+        {{ else }}
+            <p class="mt-8 text-center md:mt-12">No results found.</p>
+        {{ /if }}
+    {{ /search:results }}
+</div>

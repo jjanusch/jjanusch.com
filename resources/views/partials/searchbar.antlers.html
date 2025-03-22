@@ -1,0 +1,17 @@
+<form action="/search" class="relative w-full">
+    <label for="search" class="sr-only">Search</label>
+    <input
+        id="search"
+        name="q"
+        class="
+                bg-gray-100 text-gray-800 placeholder:text-gray-600 px-4 py-2 pr-7 w-full
+                rounded border border-gray-300 active:border-gray-400 hovery:border-gray-400 focus:border-gray-400 focus:outline-none
+            "
+        placeholder="Search..."
+        value="{{ get:q }}"
+    >
+    <button type="submit" class="text-gray-400 hover:text-green-700 hover:font-bold cursor-pointer h-full w-8 py-1 px-2 absolute right-1">
+        <span class="sr-only">Submit Search</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</form>
