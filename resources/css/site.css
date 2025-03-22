@@ -16,12 +16,3 @@
     --color-sidebar: var(--color-green-700);
     --color-divider: var(--color-slate-400);
 }
-
-.prose a {
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
-.prose a:hover {
-    text-decoration: underline;
-}
