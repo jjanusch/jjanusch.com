@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @plugin "@tailwindcss/typography";
 @source "../views";
 @source "../../content";
@@ -8,4 +9,19 @@
 }
 :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
     content: "";
+}
+
+@theme {
+    --color-primary: var(--color-green-700);
+    --color-sidebar: var(--color-green-700);
+    --color-divider: var(--color-slate-400);
+}
+
+.prose a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.prose a:hover {
+    text-decoration: underline;
 }

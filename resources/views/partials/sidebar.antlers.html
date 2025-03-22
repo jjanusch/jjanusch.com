@@ -1,3 +1,32 @@
-<div class="border-dashed border-l-1 border-gray-300 h-full px-4 py-5 flex flex-col ">
-    {{ partial:partials/searchbar }}
+<div class="border-dashed border-t-1 md:border-l-1 md:border-t-0 border-divider h-full flex flex-col mt-4 md:mt-0">
+    <div class="md:sticky md:top-0 md:max-h-[100vh] md:overflow-auto px-5 py-5">
+        <div class="hidden md:block">
+            {{ partial:partials/searchbar }}
+        </div>
+
+        {{ sidebar }}
+            <div class="my-4">
+                {{ content }}
+                    {{ partial src="sets/{type}" }}
+                {{ /content }}
+            </div>
+            {{ if links }}
+                <div class="prose">
+                    <h2>{{ links_header }}</h2>
+                </div>
+                <ul class="px-2 text-lg">
+                    {{ links }}
+                        <li class="py-1">
+                            <a href="{{ url }}" target="_blank" class="hover:text-primary block">
+                                {{ if icon_class }}
+                                    <i class="{{ icon_class }} fa-lg mr-1 fa-fw"></i>
+                                {{ /if }}
+                                {{ label }}
+                            </a>
+                        </li>
+                    {{ /links }}
+                </ul>
+            {{ /if }}
+        {{ /sidebar }}
+    </div>
 </div>

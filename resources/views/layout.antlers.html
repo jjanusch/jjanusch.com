@@ -11,12 +11,12 @@
         <link href="/fontawesome/css/brands.css" rel="stylesheet" />
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="bg-white text-black antialiased">
-        {{ partial:partials/header }}
+    <body class="bg-white text-black antialiased relative">
+        <div class="flex justify-center min-h-[100vh]">
+            <div class="w-full max-w-screen-xl px-4 md:grid grid-cols-4 gap-6">
+                <div class="md:col-span-3 pb-4">
+                    {{ partial:partials/header }}
 
-        <div class="flex justify-center">
-            <div class="w-full max-w-screen-xl md:grid grid-cols-4 gap-6">
-                <div class="md:col-span-3">
                     {{ template_content }}
                 </div>
                 <div class="md:col-span-1">
@@ -24,5 +24,7 @@
                 </div>
             </div>
         </div>
+
+        {{ partial:partials/footer }}
     </body>
 </html>

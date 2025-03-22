@@ -1,0 +1,73 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              validate:
+                - required
+              sets:
+                default_group:
+                  display: 'Default Group'
+          -
+            handle: links_header
+            field:
+              default: 'Find Me Elsewhere'
+              type: text
+              display: 'Links Header'
+          -
+            handle: links
+            field:
+              type: replicator
+              display: Links
+              sets:
+                link_group:
+                  display: 'Link Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: label
+                          field:
+                            type: text
+                            display: Label
+                            validate:
+                              - required
+                        -
+                          handle: icon_class
+                          field:
+                            type: text
+                            display: 'Icon Class'
+                        -
+                          handle: url
+                          field:
+                            type: text
+                            display: URL
+                            validate:
+                              - required
+                              - url
