@@ -22,3 +22,10 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+/content/*
+/users/*
+/public/assets
+!/content/collections/*.yaml
+!/content/navigation
+!/content/taxonomies/*.yaml
