@@ -1,11 +1,11 @@
-<div>
+<div class="mb-6">
     <h3 class="font-bold text-3xl">
         <a href="{{ permalink }}">{{ title }}</a>
     </h3>
-    {{ partial:partials/post_by_line }}
+    {{ partial:partials/posts/byline }}
     <p>
         {{ if summary }}
-            {{ summary }}
+            {{ summary | safe_truncate(250, '...') }}
         {{ else }}
             {{ content | bard_text | safe_truncate(250, '...') }}
         {{ /if }}
