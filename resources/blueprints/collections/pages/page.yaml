@@ -83,6 +83,12 @@ tabs:
               type: template
               display: Template
               localizable: true
+          -
+            handle: summary
+            field:
+              character_limit: 250
+              type: textarea
+              display: Summary
   sidebar:
     display: Sidebar
     sections:

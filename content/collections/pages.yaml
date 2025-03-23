@@ -3,6 +3,6 @@ revisions: false
 route: '{parent_uri}/{slug}'
 inject:
   seo:
-    description: '@seo:content'
+    description: '@seo:summary'
 structure:
   root: true
