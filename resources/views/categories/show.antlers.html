@@ -1,0 +1,19 @@
+<div class="prose">
+    <h2>Categories</h2>
+    <p>Showing {{ entries|count }} entries for category "<em>{{ title }}</em>"</p>
+</div>
+<div class="container py-8 md:py-12">
+    {{ entries paginate="10" as="posts" }}
+        {{ if no_results }}
+            <p>Aww, there are no results.</p>
+        {{ /if }}
+
+        <div>
+            {{ posts }}
+            {{ partial:partials/posts/card }}
+            {{ /posts }}
+        </div>
+
+        {{ partial:partials/pagination }}
+    {{ /entries }}
+</div>

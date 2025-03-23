@@ -1,0 +1,11 @@
+<ul class="flex gap-2 mt-4">
+    {{ darkModeClasses = 'bg-white text-black opacity-70 hover:opacity-80' }}
+    {{ lightModeClasses = 'bg-gray-200 text-black hover:bg-gray-300' }}
+    {{ classes = "rounded-full py-1 px-2 text-xs " +  (darkMode ? darkModeClasses : lightModeClasses) }}
+
+    {{ categories }}
+        <li>
+            <a href="/categories/{{ slug }}" class="{{ classes }}">{{ title }}</a>
+        </li>
+    {{ /categories }}
+</ul>
