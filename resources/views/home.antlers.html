@@ -1,14 +1,15 @@
 <div class="container">
     {{ if get:page === null || get:page === '1' }}
-    {{ collection:posts limit="1" as="posts" }}
-        {{ posts }}
-        <div class="mb-5">
-            {{ partial:partials/posts/featured_image showSummary="true" }}
-        </div>
-        {{ /posts }}
-    {{ /collection:posts }}
+        {{ collection:posts limit="1" as="posts" }}
+            {{ posts }}
+            <div class="mb-5">
+                {{ partial:partials/posts/featured_image showSummary="true" }}
+            </div>
+            {{ /posts }}
+        {{ /collection:posts }}
+        <hr class="border-dashed border-divider mt-4 mb-5" />
     {{ /if }}
-    {{ collection:posts paginate="2" as="posts" offset="1" }}
+    {{ collection:posts paginate="10" as="posts" offset="1" }}
 
     <div>
         {{ posts }}
