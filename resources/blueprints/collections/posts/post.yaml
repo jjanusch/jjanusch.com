@@ -133,7 +133,6 @@ tabs:
             field:
               mode: grid
               container: assets
-              dynamic: slug
               type: assets
               display: 'Featured Image'
               validate:
@@ -145,9 +144,14 @@ tabs:
               swatches:
                 - '#2bc175'
                 - '#90A1B9'
-                - '#f4bb36'
+                - '#d2812a'
                 - '#f1f1f1'
                 - '#333333'
+                - '#8bac16'
+                - '#1672ac'
+                - '#a016ac'
+                - '#ac1679'
+                - '#ac1632'
               default: '#2bc175'
               type: color
               display: 'Featured Image Color'
@@ -157,7 +161,7 @@ tabs:
               remove_empty_nodes: false
               character_limit: 350
               type: bard
-              display: featured_image_caption
+              display: 'Featured Image Caption'
       -
         display: Customization
         fields:

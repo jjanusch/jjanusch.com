@@ -1,8 +1,21 @@
 title: Asset
-fields:
-  -
-    handle: alt
-    field:
-      display: 'Alt Text'
-      type: text
-      instructions: 'Description of the image'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: alt
+            field:
+              display: 'Alt Text'
+              type: text
+              instructions: 'Description of the image'
+          -
+            handle: source
+            field:
+              type: text
+              display: Source
+              validate:
+                - sometimes
+                - url
