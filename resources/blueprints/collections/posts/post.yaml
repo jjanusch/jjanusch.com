@@ -40,6 +40,8 @@ tabs:
                 - alignleft
                 - aligncenter
                 - alignright
+              reading_time: true
+              word_count: true
               sets:
                 default_group:
                   display: 'Default Group'
@@ -87,6 +89,7 @@ tabs:
     display: Sidebar
     sections:
       -
+        display: Metadata
         fields:
           -
             handle: slug
@@ -94,6 +97,23 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              time_enabled: true
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              display: Categories
+              mode: select
           -
             handle: author
             field:
@@ -105,17 +125,55 @@ tabs:
               max_items: 1
               validate:
                 - required
+      -
+        display: 'Featured Image'
+        fields:
+          -
+            handle: featured_image
+            field:
+              mode: grid
+              container: assets
+              dynamic: slug
+              type: assets
+              display: 'Featured Image'
+              validate:
+                - required
+                - image
+          -
+            handle: featured_image_color
+            field:
+              swatches:
+                - '#2bc175'
+                - '#90A1B9'
+                - '#f4bb36'
+                - '#f1f1f1'
+                - '#333333'
+              default: '#2bc175'
+              type: color
+              display: 'Featured Image Color'
+          -
+            handle: featured_image_caption
+            field:
+              remove_empty_nodes: false
+              character_limit: 350
+              type: bard
+              display: featured_image_caption
+      -
+        display: Customization
+        fields:
           -
             handle: template
             field:
               type: template
               display: Template
+  SEO:
+    display: SEO
+    sections:
+      -
+        fields:
           -
-            handle: date
+            handle: seo
             field:
-              type: date
-              required: true
-              default: now
-              validate:
-                - required
-              time_enabled: true
+              type: seo_pro
+              listable: false
+              display: SEO

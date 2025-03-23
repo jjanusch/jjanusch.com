@@ -1,6 +1,8 @@
 {{ image }}
 <div class="w-full text-center my-3">
-    <img src="{{ url }}" class="max-w-full mx-auto border border-gray-300 rounded overflow-hidden" alt="{{ alt }}">
+    <a href="{{ url }}" target="_blank">
+        <img src="{{ url }}" class="max-w-full mx-auto border border-gray-300 rounded overflow-hidden" alt="{{ alt }}">
+    </a>
     {{ if caption }}
         <p class="text-sm text-gray-500 mt-1 italic">{{ caption }}</p>
     {{ /if }}
