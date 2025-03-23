@@ -1,0 +1,124 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+              reading_time: true
+              word_count: true
+              sets:
+                default_group:
+                  display: 'Default Group'
+                  sets:
+                    code:
+                      display: Code
+                      icon: programming-script-code
+                      fields:
+                        -
+                          handle: code
+                          field:
+                            type: code
+                            display: Code
+                            indent_type: spaces
+                    image:
+                      display: Image
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            min_files: 1
+                            container: assets
+                            dynamic: slug
+                            type: assets
+                            display: Image
+                            validate:
+                              - required
+                              - image
+                        -
+                          handle: caption
+                          field:
+                            type: text
+                            display: Caption
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+  SEO:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO

@@ -1,1 +1,8 @@
-{{ content }}
+<div class="prose mb-4">
+    <h2>{{ title }}</h2>
+</div>
+<div>
+    {{ content }}
+        {{ partial src="sets/{type}" }}
+    {{ /content }}
+</div>
