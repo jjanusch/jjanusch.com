@@ -1,11 +1,13 @@
 <div class="container py-8 md:py-12">
-    <h2>Results for: <span class="italic">{{ get:q }}</span></h2>
+    <div class="prose">
+        <h2>Results for: "<span class="italic">{{ get:q }}</span>"</h2>
+    </div>
 
     {{ search:results as="results" }}
         {{ if results }}
             <div class="container py-8 md:py-12">
                 {{ results }}
-                    {{ partial:components/posts/card }}
+                    {{ partial:partials/posts/card }}
                 {{ /results }}
             </div>
         {{ else }}
