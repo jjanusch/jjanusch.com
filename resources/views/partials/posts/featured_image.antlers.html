@@ -1,16 +1,20 @@
 {{ if featured_image }}
-    <div class="w-full flex flex-col md:flex-row rounded-lg overflow-hidden" style="background-color: {{ featured_image_color }}">
+    <div class="w-full flex flex-col md:flex-row rounded-lg overflow-hidden relative" style="background-color: {{ featured_image_color }}">
         {{ featured_image }}
-            <div class="flex-1 md:max-w-1/2 md:aspect-square">
+            <div class="flex-1 md:max-w-1/2 md:aspect-square hidden md:block">
                 <a href="{{ permalink }}">
                     <img src="{{ url }}" class="w-full h-full max-h-full object-cover" alt="{{ alt }}">
                 </a>
             </div>
+            <div
+                style="background-image: url('{{ url }}')" 
+                class="absolute top-0 left-0 right-0 bottom-0 opacity-10 bg-cover bg-center md:hidden"
+            ></div>
         {{ /featured_image }}
         <div class="flex-1 flex flex-col text-center justify-center items-center p-10">
             <a href="{{ permalink }}">
                 <h1 class="text-white text-3xl font-bold mb-3">{{ title }}</h1>
-                <p class="text-white/70 text-sm">
+                <p class="text-white/75 text-sm">
                     <span title="{{ date }}">
                         <i class="fa fa-calendar"></i> {{ date format="M j, Y" }}
                     </span>
@@ -23,7 +27,7 @@
                         <i class="fa fa-keyboard"></i> {{ content | bard_text | word_count | format_number }} words
                     </span>
                 </p>
-                <p class="text-white/70 mt-5 text-sm">
+                <p class="text-white/75 mt-5 text-sm">
                     {{ if summary }}
                         {{ summary | safe_truncate(250, '...') }}
                     {{ else }}
