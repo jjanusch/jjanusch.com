@@ -1,6 +1,11 @@
 <div class="flex justify-center bg-slate-100">
-    <div class="p-4 w-full max-w-screen-xl flex gap-2 items-center">
-        <img src="/footer-logo.svg" width="24" height="28" alt="Logo for the Drift blog" />
-        &copy; {{ date|format('Y') }} Josh Janusch. All rights reserved.
+    <div class="flex justify-between w-full max-w-screen-xl gap-4 items-center">
+        <div class="p-4 w-full max-w-screen-xl flex gap-2 items-center">
+            <img src="/footer-logo.svg" width="24" height="28" alt="Logo for the Drift blog" />
+            &copy; {{ date|format('Y') }} Josh Janusch. All rights reserved.
+        </div>
+        <a href="/feed" class="text-primary hover:text-orange-400 transition-all" title="RSS Feed">
+            <i class="fa-solid fa-rss-square fa-xl"></i>
+        </a>
     </div>
 </div>
