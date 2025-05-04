@@ -29,3 +29,4 @@ yarn-error.log
 /content/taxonomies/categories
 /users/*
 /public/assets
+/content/globals/tracking_codes.yaml

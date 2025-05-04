@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ site:short_locale }}">
     <head>
+        {{ tracking_codes:start_of_header }}
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +19,10 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
 
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        {{ tracking_codes:end_of_header }}
     </head>
     <body class="bg-neutral-50 text-black antialiased relative">
+        {{ tracking_codes:start_of_body }}
         <div class="flex justify-center min-h-[100vh]">
             <div class="w-full max-w-screen-xl px-4 md:grid grid-cols-4 gap-6">
                 <div class="md:col-span-3 pb-4">
@@ -33,5 +37,6 @@
         </div>
 
         {{ partial:partials/footer }}
+        {{ tracking_codes:end_of_body }}
     </body>
 </html>

@@ -1,0 +1,34 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: start_of_header
+            field:
+              type: textarea
+              display: 'Start of Header'
+              instructions: 'Tracking codes to be put at the start of the global page header'
+              instructions_position: below
+          -
+            handle: end_of_header
+            field:
+              type: textarea
+              display: 'End of Header'
+              instructions: 'Tracking codes to be put at the end of the global page header'
+              instructions_position: below
+          -
+            handle: start_of_body
+            field:
+              type: textarea
+              display: 'Start of Body'
+              instructions: 'Tracking codes to be put at the start of the global page body tag'
+              instructions_position: below
+          -
+            handle: end_of_body
+            field:
+              type: textarea
+              display: 'End of Body'
+              instructions: 'Tracking codes to be put at the end of the global page body tag'
+              instructions_position: below
