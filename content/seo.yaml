@@ -1,0 +1,9 @@
+title: '@seo:title'
+description: '@seo:summary'
+site_name: 'Drift - The personal blog of Josh Janusch'
+site_name_position: after
+site_name_separator: '|'
+canonical_url: '@seo:permalink'
+image: false
+priority: 0.5
+change_frequency: monthly

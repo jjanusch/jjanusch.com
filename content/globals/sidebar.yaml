@@ -1,0 +1,43 @@
+title: Sidebar
+data:
+  content:
+    -
+      type: heading
+      attrs:
+        textAlign: left
+        level: 2
+      content:
+        -
+          type: text
+          text: "Hi, I'm Josh!"
+    -
+      type: paragraph
+      attrs:
+        textAlign: left
+      content:
+        -
+          type: text
+          text: "I'm a software engineer and engineering manager based out of Phoenix, AZ. I'm a tinkerer, homelabber, sandbox gamer, and lover of all things music, television, and film. On this site, you'll find writings about all of the above and more. "
+  links_header: 'Find Me Elsewhere'
+  links:
+    -
+      id: m8kc418x
+      label: LinkedIn
+      icon_class: 'fa-brands fa-linkedin'
+      url: 'https://www.linkedin.com/in/joshjanusch/'
+      type: new_set
+      enabled: true
+    -
+      id: m8kc7tuq
+      label: GitHub
+      icon_class: 'fa-brands fa-github'
+      url: 'https://github.com/jjanusch'
+      type: new_set
+      enabled: true
+    -
+      id: m8kc5hjj
+      label: Last.fm
+      icon_class: 'fa-brands fa-lastfm'
+      url: 'https://www.last.fm/user/jaj43123'
+      type: new_set
+      enabled: true

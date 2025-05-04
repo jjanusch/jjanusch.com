@@ -23,9 +23,9 @@ yarn-error.log
 /.vscode
 /.zed
 
-/content/*
+/content/collections/pages
+/content/collections/posts
+/content/trees
+/content/taxonomies/categories
 /users/*
 /public/assets
-!/content/collections/*.yaml
-!/content/navigation
-!/content/taxonomies/*.yaml
