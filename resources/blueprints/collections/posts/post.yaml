@@ -136,8 +136,8 @@ tabs:
               type: assets
               display: 'Featured Image'
               validate:
-                - required
                 - image
+                - 'required_if:published,true'
           -
             handle: featured_image_color
             field:
