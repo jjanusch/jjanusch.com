@@ -42,3 +42,78 @@ a[href^="http://localhost"]::after
     display: none !important;
 }
 
+.prose ul > li > p:first-child,
+.prose ol > li > p:first-child {
+    margin-top: 0;
+}
+
+.prose ul > li > p:last-child,
+.prose ol > li > p:last-child {
+    margin-bottom: 0;
+}
+
+.prose table {
+    --table-border: 1px solid var(--color-gray-300);
+    @apply rounded-lg text-left border border-separate border-black border-1 w-full border-spacing-0;
+    border: var(--table-border);
+
+    /* The editor doesn't create theads but we'll account for them anyway to be safe */
+    thead, tbody {
+        cursor: default;
+
+        > tr {
+            &:not(:first-child) {
+                &:nth-child(odd) {
+                    > td, > th {
+                        @apply bg-gray-100;
+                    }
+                }
+
+                &:hover {
+                    > td, > th {
+                        @apply bg-slate-100;
+                    }
+                }
+
+                > th {
+                    @apply border-r-1 border-r-slate-300;
+                }
+            }
+
+            &:first-child {
+                @apply font-bold bg-slate-100;
+
+                > th {
+                    @apply border-slate-300;
+                    @apply border-b-1 border-b-slate-300;
+                }
+            }
+
+            > td, > th {
+                @apply py-2 px-2;
+                border-top: var(--table-border);
+                border-left: var(--table-border);
+
+                &:first-child {
+                    border-left: none;
+                }
+            }
+
+            &:first-child {
+                td, th {
+                    border-top: none;
+                }
+            }
+
+            &:last-child {
+                > td, > th {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}
